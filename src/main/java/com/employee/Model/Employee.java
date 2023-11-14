@@ -1,7 +1,5 @@
 package com.employee.Model;
 
-import com.fasterxml.jackson.annotation.JsonIncludeProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -15,7 +13,7 @@ import lombok.*;
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "employee_id",nullable = false)
+    @Column(name = "employee_id", nullable = false)
     private Long employeeId;
 
     @Column(name = "employee_name", nullable = false)

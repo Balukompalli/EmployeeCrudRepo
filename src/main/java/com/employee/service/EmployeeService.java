@@ -19,17 +19,17 @@ public class EmployeeService {
     EmployeeRepository employeeRepository;
 
     public Employee saveEmployee(Employee employee) {
-        return  employeeRepository.save(employee);
+        return employeeRepository.save(employee);
     }
 
 
     public List<Employee> getAllEmployee() {
-        return  employeeRepository.findAll();
+        return employeeRepository.findAll();
     }
 
 
     public Optional<Employee> getEmployeeByEmployeeId(Long employeeId) {
-        return  employeeRepository.findById(employeeId);
+        return employeeRepository.findById(employeeId);
     }
 
 
