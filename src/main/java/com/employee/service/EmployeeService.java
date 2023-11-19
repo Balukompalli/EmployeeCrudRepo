@@ -22,7 +22,9 @@ public class EmployeeService {
 
     EmployeeRepository employeeRepository;
 
-    public Employee saveEmployee(Employee employee) {
+    public Employee saveEmployee(Employee employee) throws Exception {
+        if(employee.getEmployeeName().length() < 3)
+            throw new MyDatabaseException("Employee name should be minimum 3 letters");
         return employeeRepository.save(employee);
     }
 
