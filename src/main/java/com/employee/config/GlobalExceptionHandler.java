@@ -1,16 +1,13 @@
 package com.employee.config;
 
 
+import com.employee.exception.MyDatabaseException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.config.InactiveConfigDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
-
-import java.net.ConnectException;
-import java.sql.SQLSyntaxErrorException;
-import java.util.logging.Logger;
 
 @ControllerAdvice
 @Slf4j
