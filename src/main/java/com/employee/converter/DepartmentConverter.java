@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
-@Converter(autoApply = true)
+//@Converter(autoApply = true)
 public class DepartmentConverter implements AttributeConverter<Department, String> {
 
     @Override

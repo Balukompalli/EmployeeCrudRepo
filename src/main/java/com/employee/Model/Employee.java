@@ -1,6 +1,6 @@
 package com.employee.Model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.employee.converter.DepartmentConverter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
@@ -28,6 +28,7 @@ public class Employee implements Serializable {
     @Column(name = "salary", nullable = false)
     private Long salary;
 
+    @Convert(converter= DepartmentConverter.class)
     @ManyToOne
     @JoinColumn(name = "department_id", nullable = false)
     private Department department;
