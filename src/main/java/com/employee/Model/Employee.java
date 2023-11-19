@@ -1,5 +1,7 @@
 package com.employee.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,6 +15,7 @@ import java.io.Serializable;
 @EqualsAndHashCode
 @ToString
 @Builder
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Employee implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,10 +25,11 @@ public class Employee implements Serializable {
     @Column(name = "employee_name", nullable = false)
     private String employeeName;
 
-    @Column(name = "department_name", nullable = false)
-    private String departmentName;
-
     @Column(name = "salary", nullable = false)
     private Long salary;
+
+    @ManyToOne
+    @JoinColumn(name = "department_id", nullable = false)
+    private Department department;
 
 }

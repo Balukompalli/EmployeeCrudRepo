@@ -54,14 +54,7 @@ public class EmployeeAspect {
         log.info("@Around on EmployeeService :  started for method :"+proceedingJoinPoint.getSignature()+" and time :"+ LocalDateTime.now());
 
         try {
-            Employee employee = Employee.builder()
-                    .employeeName("dummy")
-                    .departmentName("qa")
-                    .salary(10000L)
-                    .build();
-            Employee[] dummyEmployees = new Employee[1]; //Aspect has the power to change the employeeName instead of request's employee name
-            dummyEmployees[0] =employee;
-            return (Employee) proceedingJoinPoint.proceed(dummyEmployees);
+            return (Employee) proceedingJoinPoint.proceed();
 //            proceedingJoinPoint.proceed();
 //            proceedingJoinPoint.proceed();
         } catch (Throwable throwable) {
