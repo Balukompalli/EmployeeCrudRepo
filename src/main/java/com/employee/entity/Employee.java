@@ -1,4 +1,4 @@
-package com.employee.Model;
+package com.employee.entity;
 
 import com.employee.converter.DepartmentConverter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

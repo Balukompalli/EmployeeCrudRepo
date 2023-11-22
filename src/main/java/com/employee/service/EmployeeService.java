@@ -1,11 +1,8 @@
 package com.employee.service;
 
-import com.employee.Model.Department;
-import com.employee.Model.Employee;
-import com.employee.dao.DepartmentRepository;
+import com.employee.entity.Employee;
 import com.employee.exception.MyDatabaseException;
 import com.employee.dao.EmployeeRepository;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;

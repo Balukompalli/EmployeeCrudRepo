@@ -1,10 +1,9 @@
 package com.employee.converter;
 
-import com.employee.Model.Department;
+import com.employee.entity.Department;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.AttributeConverter;
-import jakarta.persistence.Converter;
 
 //@Converter(autoApply = true)
 public class DepartmentConverter implements AttributeConverter<Department, String> {

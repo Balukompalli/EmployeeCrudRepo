@@ -1,18 +1,14 @@
 package com.employee.service;
 
-import com.employee.Model.Department;
-import com.employee.Model.Employee;
+import com.employee.entity.Department;
+import com.employee.entity.Employee;
 import com.employee.dao.DepartmentRepository;
-import com.employee.dao.EmployeeRepository;
 import com.employee.exception.MyDatabaseException;
-import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 public class DepartmentService {
